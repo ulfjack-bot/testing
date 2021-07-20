@@ -25,7 +25,7 @@ jobs:
         curl \
           --header "Authorization: Bearer $GITHUB_TOKEN" \
           --header "Accept: application/vnd.github.inertia-preview+json" \
-          https://api.github.com/repos/envoyproxy/envoy-mobile/collaborators
+          https://api.github.com/orgs/EngFlow/packages/container/hello-world
         echo "${{ secrets.GITHUB_TOKEN }}" | docker login ghcr.io -u nobody --password-stdin
         docker pull ghcr.io/engflow/hello-world:1.0
         sleep 20
